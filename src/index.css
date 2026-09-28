@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --tv-blue: #2962FF;
+    --tv-blue-hover: #1E53E5;
+    --tv-green: #089981;
+    --tv-green-bg: #E8F5F1;
+    --tv-red: #F23645;
+    --tv-red-bg: #FDF0F1;
+    --tv-gray-bg: #F0F3FA;
+    --tv-gray-hover: #E0E3EB;
+    --tv-border: #E0E3EB;
+    --tv-text-primary: #131722;
+    --tv-text-secondary: #6A6D78;
+    --tv-badge-red: #D32F2F;
+    --tv-badge-cyan: #00A3E0;
+    --tv-badge-blue: #0066CC;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    color: #131722;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tv-btn-gradient {
+  background: linear-gradient(135deg, #2962FF 0%, #8C3BFF 100%);
+}
+.tv-btn-gradient:hover {
+  background: linear-gradient(135deg, #1E53E5 0%, #7928E6 100%);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.25); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.25); }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flashGreen 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flash-down {
+  animation: flashRed 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
